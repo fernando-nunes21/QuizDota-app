@@ -1,24 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="quizDota_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sven" translatesAutoresizingMaskIntoConstraints="NO" id="7PW-mN-Tdb" userLabel="background">
+                                <rect key="frame" x="0.0" y="39" width="414" height="818"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ce3-NO-hIi">
+                                <rect key="frame" x="-10" y="39" width="434" height="818"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dota-2-Logo" translatesAutoresizingMaskIntoConstraints="NO" id="MQd-QN-izL">
+                                        <rect key="frame" x="74.5" y="50" width="285" height="197"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="285" id="a1G-9A-m5d"/>
+                                            <constraint firstAttribute="height" constant="197" id="bLV-CK-Cn4"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você entende tudo sobre o Dota 2?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SKf-8w-Hmo">
+                                        <rect key="frame" x="18" y="340" width="398" height="139"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="139" id="TGA-YT-6Tk"/>
+                                            <constraint firstAttribute="width" secondItem="SKf-8w-Hmo" secondAttribute="height" multiplier="398:139" id="fmN-UB-YVl"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="130" id="rRb-AV-Vat"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="34"/>
+                                        <color key="textColor" red="0.20392158630000001" green="0.20784312490000001" blue="0.2235293984" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JX4-Jy-S7l" customClass="BorderButton" customModule="quizDota_app" customModuleProvider="target">
+                                        <rect key="frame" x="18" y="709" width="398" height="75"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="JX4-Jy-S7l" secondAttribute="height" multiplier="398:75" id="srr-d6-65s"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="JOGAR">
+                                            <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="32"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" red="0.20392158630000001" green="0.20784312490000001" blue="0.2235293984" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.98828297853469849" green="0.010003299452364445" blue="0.097786940634250641" alpha="0.54899627483443714" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="JX4-Jy-S7l" firstAttribute="leading" secondItem="ce3-NO-hIi" secondAttribute="leading" constant="18" id="ABF-6K-JDz"/>
+                                    <constraint firstItem="SKf-8w-Hmo" firstAttribute="top" secondItem="MQd-QN-izL" secondAttribute="bottom" constant="93" id="ALg-le-cFw"/>
+                                    <constraint firstItem="MQd-QN-izL" firstAttribute="centerX" secondItem="ce3-NO-hIi" secondAttribute="centerX" id="OKT-yj-8PV"/>
+                                    <constraint firstAttribute="bottom" secondItem="JX4-Jy-S7l" secondAttribute="bottom" constant="34" id="XKK-Iw-qsY"/>
+                                    <constraint firstAttribute="bottom" secondItem="SKf-8w-Hmo" secondAttribute="bottom" constant="339" id="aL2-My-1r8"/>
+                                    <constraint firstItem="SKf-8w-Hmo" firstAttribute="top" secondItem="ce3-NO-hIi" secondAttribute="top" constant="340" id="d8I-ku-0Zx"/>
+                                    <constraint firstItem="MQd-QN-izL" firstAttribute="top" secondItem="ce3-NO-hIi" secondAttribute="top" constant="50" id="dir-Em-1Vq"/>
+                                    <constraint firstAttribute="trailing" secondItem="JX4-Jy-S7l" secondAttribute="trailing" constant="18" id="f6g-Ia-krw"/>
+                                    <constraint firstItem="SKf-8w-Hmo" firstAttribute="centerX" secondItem="ce3-NO-hIi" secondAttribute="centerX" id="lod-Wh-WTi"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7PW-mN-Tdb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1uV-Fc-1S8"/>
+                            <constraint firstItem="ce3-NO-hIi" firstAttribute="centerX" secondItem="7PW-mN-Tdb" secondAttribute="centerX" id="KoQ-JJ-Sl7"/>
+                            <constraint firstItem="7PW-mN-Tdb" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" id="LhV-nj-WBa"/>
+                            <constraint firstItem="7PW-mN-Tdb" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="P5g-g6-Lfe"/>
+                            <constraint firstItem="ce3-NO-hIi" firstAttribute="height" secondItem="7PW-mN-Tdb" secondAttribute="height" id="Wtm-e6-IPi"/>
+                            <constraint firstItem="7PW-mN-Tdb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="aAw-50-fLs"/>
+                            <constraint firstItem="ce3-NO-hIi" firstAttribute="width" secondItem="7PW-mN-Tdb" secondAttribute="width" multiplier="1.04831" id="cH0-gA-bFf"/>
+                            <constraint firstItem="ce3-NO-hIi" firstAttribute="centerY" secondItem="7PW-mN-Tdb" secondAttribute="centerY" id="wW5-Ps-6iM"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="67.633928571428569"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.20392158630000001" green="0.20784312490000001" blue="0.2235293984" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+    <resources>
+        <image name="Dota-2-Logo" width="1280" height="720"/>
+        <image name="sven" width="397" height="223.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
