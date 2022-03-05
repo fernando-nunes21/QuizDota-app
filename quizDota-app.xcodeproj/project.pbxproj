@@ -14,6 +14,8 @@
 		0479C42F27B2814100402886 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0479C42E27B2814100402886 /* Assets.xcassets */; };
 		0479C43227B2814100402886 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0479C43027B2814100402886 /* LaunchScreen.storyboard */; };
 		0479C43A27B287E800402886 /* BorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0479C43927B287E800402886 /* BorderButton.swift */; };
+		04DF606827C6512E00668095 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF606727C6512E00668095 /* QuestionViewController.swift */; };
+		04E016F127D315D6000ECBA9 /* EndGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E016F027D315D6000ECBA9 /* EndGameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		0479C43127B2814100402886 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0479C43327B2814100402886 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0479C43927B287E800402886 /* BorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderButton.swift; sourceTree = "<group>"; usesTabs = 0; };
+		04DF606727C6512E00668095 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		04E016F027D315D6000ECBA9 /* EndGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndGameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				0479C43027B2814100402886 /* LaunchScreen.storyboard */,
 				0479C43327B2814100402886 /* Info.plist */,
 				0479C43927B287E800402886 /* BorderButton.swift */,
+				04DF606727C6512E00668095 /* QuestionViewController.swift */,
+				04E016F027D315D6000ECBA9 /* EndGameViewController.swift */,
 			);
 			path = "quizDota-app";
 			sourceTree = "<group>";
@@ -142,6 +148,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0479C42A27B2814000402886 /* ViewController.swift in Sources */,
+				04DF606827C6512E00668095 /* QuestionViewController.swift in Sources */,
+				04E016F127D315D6000ECBA9 /* EndGameViewController.swift in Sources */,
 				0479C42627B2814000402886 /* AppDelegate.swift in Sources */,
 				0479C42827B2814000402886 /* SceneDelegate.swift in Sources */,
 				0479C43A27B287E800402886 /* BorderButton.swift in Sources */,

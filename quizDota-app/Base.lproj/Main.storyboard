@@ -52,6 +52,9 @@
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.20392158630000001" green="0.20784312490000001" blue="0.2235293984" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="CtS-sM-t39" kind="show" id="jgn-mC-sFL"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.98828297853469849" green="0.010003299452364445" blue="0.097786940634250641" alpha="0.54899627483443714" colorSpace="custom" customColorSpace="sRGB"/>
@@ -86,11 +89,245 @@
             </objects>
             <point key="canvasLocation" x="28.985507246376812" y="67.633928571428569"/>
         </scene>
+        <!--Question View Controller-->
+        <scene sceneID="NNP-pQ-JOf">
+            <objects>
+                <viewController id="CtS-sM-t39" customClass="QuestionViewController" customModule="quizDota_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CFe-is-9Ja">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sven" translatesAutoresizingMaskIntoConstraints="NO" id="ZWY-Lt-1kk" userLabel="background">
+                                <rect key="frame" x="0.0" y="17" width="414" height="842"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fu0-LK-NMC">
+                                <rect key="frame" x="-10" y="17" width="434" height="842"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sven-1" translatesAutoresizingMaskIntoConstraints="NO" id="vau-sF-HW1">
+                                        <rect key="frame" x="74.5" y="50" width="285" height="197"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="197" id="JvV-Ze-JJ2"/>
+                                            <constraint firstAttribute="width" constant="285" id="QnM-OS-rIg"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qual é o heroi desta imagem?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXn-iG-iYb">
+                                        <rect key="frame" x="18" y="340" width="398" height="139"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="KXn-iG-iYb" secondAttribute="height" multiplier="398:139" id="G1U-ZL-5TD"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="130" id="X47-iw-vC8"/>
+                                            <constraint firstAttribute="height" constant="139" id="lJr-ce-JJd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="34"/>
+                                        <color key="textColor" red="0.20392158630000001" green="0.20784312490000001" blue="0.2235293984" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0Du-32-VFQ">
+                                        <rect key="frame" x="74" y="522" width="278.5" height="234"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7jx-9O-3dK" customClass="BorderButton" customModule="quizDota_app" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="278.5" height="52.5"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="TerorBlade">
+                                                    <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="32"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" red="0.20392158630000001" green="0.20784312490000001" blue="0.2235293984" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="button1:" destination="CtS-sM-t39" eventType="touchUpInside" id="F5k-qt-Xjb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XJ7-xX-elf" customClass="BorderButton" customModule="quizDota_app" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="60.5" width="278.5" height="52.5"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="Sven">
+                                                    <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="32"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" red="0.20392158630000001" green="0.20784312490000001" blue="0.2235293984" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="button2:" destination="CtS-sM-t39" eventType="touchUpInside" id="45E-BP-Sq6"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QwR-k2-mAS" customClass="BorderButton" customModule="quizDota_app" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="121" width="278.5" height="52.5"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="Axe">
+                                                    <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="32"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" red="0.20392158630000001" green="0.20784312490000001" blue="0.2235293984" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="button3:" destination="CtS-sM-t39" eventType="touchUpInside" id="lHU-r6-cB2"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrL-dL-Sao" customClass="BorderButton" customModule="quizDota_app" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="181.5" width="278.5" height="52.5"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="Lich">
+                                                    <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="32"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" red="0.20392158630000001" green="0.20784312490000001" blue="0.2235293984" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="button4:" destination="CtS-sM-t39" eventType="touchUpInside" id="puk-Bm-hFo"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.98828297850000002" green="0.010003299449999999" blue="0.097786940629999999" alpha="0.54899627480000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="KXn-iG-iYb" firstAttribute="centerX" secondItem="fu0-LK-NMC" secondAttribute="centerX" id="2JZ-wk-bKa"/>
+                                    <constraint firstItem="KXn-iG-iYb" firstAttribute="top" secondItem="vau-sF-HW1" secondAttribute="bottom" constant="93" id="Vdn-di-Irx"/>
+                                    <constraint firstItem="0Du-32-VFQ" firstAttribute="leading" secondItem="fu0-LK-NMC" secondAttribute="leading" constant="74" id="chs-XW-xxK"/>
+                                    <constraint firstItem="0Du-32-VFQ" firstAttribute="top" secondItem="KXn-iG-iYb" secondAttribute="bottom" constant="43" id="d5e-8z-ozP"/>
+                                    <constraint firstAttribute="bottom" secondItem="0Du-32-VFQ" secondAttribute="bottom" constant="86" id="eby-rN-Why"/>
+                                    <constraint firstItem="vau-sF-HW1" firstAttribute="centerX" secondItem="fu0-LK-NMC" secondAttribute="centerX" id="lLr-yH-JhE"/>
+                                    <constraint firstItem="vau-sF-HW1" firstAttribute="top" secondItem="fu0-LK-NMC" secondAttribute="top" constant="50" id="m4e-Jl-5DC"/>
+                                    <constraint firstItem="KXn-iG-iYb" firstAttribute="top" secondItem="fu0-LK-NMC" secondAttribute="top" constant="340" id="o8C-Y4-tkA"/>
+                                    <constraint firstAttribute="trailing" secondItem="0Du-32-VFQ" secondAttribute="trailing" constant="81.5" id="rE9-hU-uKn"/>
+                                    <constraint firstAttribute="bottom" secondItem="KXn-iG-iYb" secondAttribute="bottom" constant="339" id="yLw-3d-wg6"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BqT-Ot-SgE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZWY-Lt-1kk" firstAttribute="height" secondItem="BqT-Ot-SgE" secondAttribute="height" id="AqI-2g-rJe"/>
+                            <constraint firstItem="fu0-LK-NMC" firstAttribute="centerY" secondItem="ZWY-Lt-1kk" secondAttribute="centerY" id="Ffi-1Q-vvA"/>
+                            <constraint firstItem="fu0-LK-NMC" firstAttribute="centerX" secondItem="ZWY-Lt-1kk" secondAttribute="centerX" id="QvL-Ht-ENc"/>
+                            <constraint firstItem="fu0-LK-NMC" firstAttribute="width" secondItem="ZWY-Lt-1kk" secondAttribute="width" multiplier="1.04831" id="bYA-ua-2F0"/>
+                            <constraint firstItem="ZWY-Lt-1kk" firstAttribute="centerY" secondItem="CFe-is-9Ja" secondAttribute="centerY" id="hZQ-5r-Ugz"/>
+                            <constraint firstItem="fu0-LK-NMC" firstAttribute="height" secondItem="ZWY-Lt-1kk" secondAttribute="height" id="r4g-Kf-cMN"/>
+                            <constraint firstItem="ZWY-Lt-1kk" firstAttribute="width" secondItem="BqT-Ot-SgE" secondAttribute="width" id="rJx-t0-BIA"/>
+                            <constraint firstItem="ZWY-Lt-1kk" firstAttribute="centerX" secondItem="CFe-is-9Ja" secondAttribute="centerX" id="tw0-td-9a4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="b7u-9J-p8L"/>
+                    <connections>
+                        <outlet property="questionImage" destination="vau-sF-HW1" id="EUE-Ja-Vhr"/>
+                        <outlet property="stackButtons" destination="0Du-32-VFQ" id="YyI-FC-meG"/>
+                        <segue destination="6wg-Ki-1me" kind="show" identifier="endgame" id="2rG-ju-A6Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D8c-6A-xv0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="839" y="68"/>
+        </scene>
+        <!--End Game View Controller-->
+        <scene sceneID="BBw-qT-cWp">
+            <objects>
+                <viewController id="6wg-Ki-1me" customClass="EndGameViewController" customModule="quizDota_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bYP-PX-Lj7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sven" translatesAutoresizingMaskIntoConstraints="NO" id="bdV-sd-AaA" userLabel="background">
+                                <rect key="frame" x="0.0" y="17" width="414" height="808"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x8D-QN-EGj">
+                                <rect key="frame" x="-10" y="17" width="434" height="808"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FIM DE JOGO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3h-tu-z5G">
+                                        <rect key="frame" x="24" y="35" width="385" height="48"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você Fez:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rU8-gx-YyP">
+                                        <rect key="frame" x="24" y="235" width="385" height="51"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="51" id="WoX-KK-I97"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XbI-Os-q9I">
+                                        <rect key="frame" x="168" y="271" width="97" height="216"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="200"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Pontos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2p-XI-QNf">
+                                        <rect key="frame" x="25" y="495" width="385" height="48"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TNW-pz-WLf" customClass="BorderButton" customModule="quizDota_app" customModuleProvider="target">
+                                        <rect key="frame" x="17" y="708" width="399" height="75"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="TNW-pz-WLf" secondAttribute="height" multiplier="398:75" id="m7V-y7-3wc"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="JOGAR NOVAMENTE">
+                                            <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="32"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" red="0.20392158630000001" green="0.20784312490000001" blue="0.2235293984" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="DEw-Oe-Vzg" kind="unwind" unwindAction="restartGameWithSegue:" id="LSe-D5-OuN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.98828297850000002" green="0.010003299449999999" blue="0.097786940629999999" alpha="0.54899627480000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="TNW-pz-WLf" firstAttribute="centerX" secondItem="rU8-gx-YyP" secondAttribute="centerX" id="1ZU-bF-622"/>
+                                    <constraint firstItem="rU8-gx-YyP" firstAttribute="top" secondItem="x8D-QN-EGj" secondAttribute="top" constant="235" id="1n7-Xw-P6h"/>
+                                    <constraint firstItem="TNW-pz-WLf" firstAttribute="bottom" secondItem="x8D-QN-EGj" secondAttribute="bottomMargin" id="70R-0q-lWT"/>
+                                    <constraint firstItem="F3h-tu-z5G" firstAttribute="top" secondItem="x8D-QN-EGj" secondAttribute="top" constant="35" id="8lv-qg-9KM"/>
+                                    <constraint firstItem="F3h-tu-z5G" firstAttribute="leading" secondItem="x8D-QN-EGj" secondAttribute="leading" constant="24" id="KPe-Vi-2OO"/>
+                                    <constraint firstItem="XbI-Os-q9I" firstAttribute="leading" secondItem="x8D-QN-EGj" secondAttribute="leading" constant="168" id="KUd-ma-ldX"/>
+                                    <constraint firstItem="rU8-gx-YyP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="F3h-tu-z5G" secondAttribute="leading" id="M29-AJ-foF"/>
+                                    <constraint firstAttribute="bottom" secondItem="E2p-XI-QNf" secondAttribute="bottom" constant="265" id="O9U-Yi-b57"/>
+                                    <constraint firstItem="E2p-XI-QNf" firstAttribute="top" secondItem="XbI-Os-q9I" secondAttribute="bottom" constant="8" id="TiR-ZR-mZk"/>
+                                    <constraint firstItem="E2p-XI-QNf" firstAttribute="leading" secondItem="x8D-QN-EGj" secondAttribute="leading" constant="25" id="Xc8-zK-EVH"/>
+                                    <constraint firstAttribute="trailing" secondItem="F3h-tu-z5G" secondAttribute="trailing" constant="25" id="Zf3-9i-TDi"/>
+                                    <constraint firstItem="TNW-pz-WLf" firstAttribute="leading" secondItem="x8D-QN-EGj" secondAttribute="leading" constant="17" id="aQB-Fz-RxJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="E2p-XI-QNf" secondAttribute="trailing" constant="24" id="fra-6G-B9i"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XbI-Os-q9I" secondAttribute="trailing" constant="20" symbolic="YES" id="iZQ-Sk-o5D"/>
+                                    <constraint firstItem="XbI-Os-q9I" firstAttribute="top" secondItem="x8D-QN-EGj" secondAttribute="top" constant="271" id="mth-Jp-sOO"/>
+                                    <constraint firstItem="TNW-pz-WLf" firstAttribute="width" secondItem="TNW-pz-WLf" secondAttribute="height" multiplier="398:75" id="pJg-7W-pbt"/>
+                                    <constraint firstItem="TNW-pz-WLf" firstAttribute="centerX" secondItem="XbI-Os-q9I" secondAttribute="centerX" id="sNH-J9-g6X"/>
+                                    <constraint firstItem="rU8-gx-YyP" firstAttribute="trailing" secondItem="F3h-tu-z5G" secondAttribute="trailing" id="uGh-uK-suU"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="r9f-S7-jEm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="x8D-QN-EGj" firstAttribute="width" secondItem="bdV-sd-AaA" secondAttribute="width" multiplier="1.04831" id="3Gb-z9-qzy"/>
+                            <constraint firstItem="bdV-sd-AaA" firstAttribute="centerY" secondItem="bYP-PX-Lj7" secondAttribute="centerY" id="7qv-zY-BTe"/>
+                            <constraint firstItem="bdV-sd-AaA" firstAttribute="centerX" secondItem="bYP-PX-Lj7" secondAttribute="centerX" id="EWU-Cq-YvR"/>
+                            <constraint firstItem="x8D-QN-EGj" firstAttribute="centerY" secondItem="bdV-sd-AaA" secondAttribute="centerY" id="Pas-7b-Gcf"/>
+                            <constraint firstItem="x8D-QN-EGj" firstAttribute="centerX" secondItem="bdV-sd-AaA" secondAttribute="centerX" id="eEk-Q9-lKe"/>
+                            <constraint firstItem="bdV-sd-AaA" firstAttribute="width" secondItem="r9f-S7-jEm" secondAttribute="width" id="kZ6-Bm-8Pa"/>
+                            <constraint firstItem="x8D-QN-EGj" firstAttribute="height" secondItem="bdV-sd-AaA" secondAttribute="height" id="qzw-p5-Cp8"/>
+                            <constraint firstItem="bdV-sd-AaA" firstAttribute="height" secondItem="r9f-S7-jEm" secondAttribute="height" id="rwT-Pk-thf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jSQ-eV-Xad"/>
+                    <connections>
+                        <outlet property="endPoints" destination="XbI-Os-q9I" id="gOv-ez-29W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xuk-fk-i7M" sceneMemberID="firstResponder"/>
+                <exit id="DEw-Oe-Vzg" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1759.4202898550725" y="67.633928571428569"/>
+        </scene>
     </scenes>
     <color key="tintColor" red="0.20392158630000001" green="0.20784312490000001" blue="0.2235293984" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
     <resources>
         <image name="Dota-2-Logo" width="1280" height="720"/>
         <image name="sven" width="397" height="223.5"/>
+        <image name="sven-1" width="1440" height="1440"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
